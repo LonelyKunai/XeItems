@@ -1,0 +1,46 @@
+# XeItems configuration. Edit it and restart the server to apply the changes.
+
+# Language for logs, command descriptions and item names: "en_us" or "es_es".
+# Chat messages always use each player's own game language.
+language = "es_es"
+
+# Namespace added to item and recipe IDs written without one
+# (magic_wand -> xeitems:magic_wand).
+namespace = "xeitems"
+
+# Operator level (0-4) that gets all XeItems permissions by default.
+op_level = 2
+
+[crafting]
+# Unpatched Pumpkin gives plugin recipes' results as plain items. When true, a crafted plain
+# item is replaced with the full custom item (name, lore, enchantments) once it reaches the
+# inventory. Only for materials that a single XeItems item crafts and vanilla doesn't: the
+# plugin can't see which recipe was used, and the others are listed in the log at start.
+# The patched Pumpkin gives the full item directly and doesn't need this.
+fix_crafted_items = true
+# How many seconds to wait for the crafted item to reach the inventory.
+fix_timeout = 30
+
+[items]
+# When a player joins, their XeItems items are rebuilt from the current definitions
+# (same as /xeitems update). Durability already used is kept.
+update_on_join = true
+
+[examples]
+# Register the example item Diamond Dirt (9 dirt -> 1 diamond dirt).
+diamond_dirt = true
+
+[rarity]
+# Every new copy of an item with progression (crafted, dropped by a mob or given) rolls
+# a rarity with these weights. Rarer copies have stronger abilities and stats:
+# uncommon +5 %, rare +10 %, epic +20 %, legendary +35 %.
+# An item can use its own weights ("rarezas" in its "progresion" in its item file).
+common = 55
+uncommon = 25
+rare = 12
+epic = 6
+legendary = 2
+
+[editor]
+# Words that cancel typing a name or lore line in chat while using /xeitems edit.
+cancel_words = ["cancel", "cancelar"]

@@ -1,0 +1,254 @@
+{
+  "items": [
+    {
+      "id": "fire_sword",
+      "material": "minecraft:iron_sword",
+      "material_receta": "minecraft:flint",
+      "nombre": { "en_us": "Fire Sword", "es_es": "Espada de fuego" },
+      "lore": { "en_us": ["Burns your enemies."], "es_es": ["Quema a tus enemigos."] },
+      "cantidad": 1,
+      "encantamientos": { "minecraft:fire_aspect": 2 },
+      "rareza": "rare",
+      "atributos": [{ "atributo": "attack_damage", "cantidad": 2 }],
+      "habilidades": {
+        "hit": {
+          "cooldown": 40,
+          "acciones": [
+            { "tipo": "fuego", "segundos": 4 },
+            { "tipo": "particula", "particula": "flame", "cantidad": 15 },
+            { "tipo": "mensaje", "texto": "§cFlame burst!" }
+          ]
+        },
+        "right_click": {
+          "cooldown": 100,
+          "acciones": [
+            { "tipo": "efecto", "efecto": "fire_resistance", "segundos": 10 },
+            { "tipo": "impulso", "fuerza": 1.2 },
+            { "tipo": "sonido", "sonido": "item.firecharge.use" }
+          ]
+        }
+      },
+      "recetas": [
+        {
+          "tipo": "shaped",
+          "id": "fire_sword",
+          "patron": [" B ", " B ", " S "],
+          "claves": { "B": "minecraft:blaze_rod", "S": "#minecraft:planks" },
+          "categoria": "EQUIPMENT"
+        },
+        {
+          "tipo": "shapeless",
+          "id": "fire_sword_quick",
+          "ingredientes": ["minecraft:iron_sword", "minecraft:blaze_powder"]
+        },
+        {
+          "tipo": "cooking",
+          "id": "fire_sword_smelt",
+          "entrada": ["minecraft:golden_sword", "minecraft:iron_sword"],
+          "estacion": "BLASTING",
+          "experiencia": 1.0,
+          "tiempo": 100
+        }
+      ]
+    },
+    {
+      "id": "bronze_sword",
+      "material": "minecraft:iron_sword",
+      "material_receta": "minecraft:nautilus_shell",
+      "nombre": { "en_us": "Bronze Sword", "es_es": "Espada de bronce" },
+      "lore": { "en_us": ["A reliable blade for the first adventures."], "es_es": ["Una hoja fiable para las primeras aventuras."] },
+      "cantidad": 1,
+      "rareza": "uncommon",
+      "habilidades": {
+        "hit": {
+          "cooldown": 18,
+          "acciones": [
+            { "tipo": "danio", "cantidad": 2.5 },
+            { "tipo": "particula", "particula": "crit", "cantidad": 8 },
+            { "tipo": "mensaje", "texto": "§6Steel cut!" }
+          ]
+        },
+        "right_click": {
+          "cooldown": 30,
+          "acciones": [
+            { "tipo": "impulso", "fuerza": 0.8 },
+            { "tipo": "sonido", "sonido": "entity.player.attack.sweep" }
+          ]
+        }
+      },
+      "recetas": [
+        {
+          "tipo": "shaped",
+          "id": "bronze_sword",
+          "patron": [" B ", " B ", " S "],
+          "claves": { "B": "minecraft:iron_ingot", "S": "minecraft:stick" },
+          "categoria": "EQUIPMENT"
+        }
+      ]
+    },
+    {
+      "id": "guardian_helmet",
+      "material": "minecraft:chainmail_helmet",
+      "modelo": "minecraft:iron_helmet",
+      "nombre": { "en_us": "Guardian Helmet", "es_es": "Yelmo del guardián" },
+      "lore": { "en_us": ["Worn by heroes who stand on the front line."], "es_es": ["Llevado por héroes que se adelantan al frente."] },
+      "cantidad": 1,
+      "rareza": "rare",
+      "atributos": [{ "atributo": "max_health", "cantidad": 2 }],
+      "habilidades": {
+        "right_click": {
+          "cooldown": 40,
+          "acciones": [
+            { "tipo": "efecto", "efecto": "resistance", "segundos": 6 },
+            { "tipo": "curar", "cantidad": 2 },
+            { "tipo": "mensaje", "texto": "§aGuardian stance activated." }
+          ]
+        }
+      },
+      "recetas": [
+        {
+          "tipo": "shaped",
+          "id": "guardian_helmet",
+          "patron": ["III", "I I"],
+          "claves": { "I": "minecraft:iron_ingot" },
+          "categoria": "EQUIPMENT"
+        }
+      ]
+    },
+    {
+      "id": "aegis_chestplate",
+      "material": "minecraft:chainmail_chestplate",
+      "modelo": "minecraft:iron_chestplate",
+      "nombre": { "en_us": "Aegis Chestplate", "es_es": "Pechera de Aegis" },
+      "lore": { "en_us": ["A sturdy plate for tank builds."], "es_es": ["Una placa sólida para construcciones de tanque."] },
+      "cantidad": 1,
+      "rareza": "rare",
+      "atributos": [
+        { "atributo": "max_health", "cantidad": 4 },
+        { "atributo": "armor", "cantidad": 1, "ranura": "chest" }
+      ],
+      "habilidades": {
+        "hit": {
+          "cooldown": 25,
+          "acciones": [
+            { "tipo": "efecto", "efecto": "slowness", "segundos": 3, "objetivo": "target" },
+            { "tipo": "particula", "particula": "sweep_attack", "cantidad": 10 }
+          ]
+        },
+        "right_click": {
+          "cooldown": 55,
+          "acciones": [
+            { "tipo": "efecto", "efecto": "strength", "segundos": 8 },
+            { "tipo": "sonido", "sonido": "entity.player.levelup" }
+          ]
+        }
+      },
+      "recetas": [
+        {
+          "tipo": "shaped",
+          "id": "aegis_chestplate",
+          "patron": ["I I", "III", "III"],
+          "claves": { "I": "minecraft:iron_ingot" },
+          "categoria": "EQUIPMENT"
+        }
+      ]
+    },
+    {
+      "id": "swift_boots",
+      "material": "minecraft:chainmail_boots",
+      "modelo": "minecraft:iron_boots",
+      "nombre": { "en_us": "Swift Boots", "es_es": "Botas veloces" },
+      "lore": { "en_us": ["Built for chase and escape."], "es_es": ["Diseñadas para perseguir y escapar."] },
+      "cantidad": 1,
+      "rareza": "uncommon",
+      "atributos": [
+        { "atributo": "movement_speed", "cantidad": 0.08 },
+        { "atributo": "armor", "cantidad": 1, "ranura": "feet" }
+      ],
+      "habilidades": {
+        "right_click": {
+          "cooldown": 35,
+          "acciones": [
+            { "tipo": "efecto", "efecto": "speed", "segundos": 8 },
+            { "tipo": "impulso", "fuerza": 0.9 },
+            { "tipo": "mensaje", "texto": "§bDash step!" }
+          ]
+        }
+      },
+      "recetas": [
+        {
+          "tipo": "shaped",
+          "id": "swift_boots",
+          "patron": ["I I", "I I"],
+          "claves": { "I": "minecraft:iron_ingot" },
+          "categoria": "EQUIPMENT"
+        }
+      ]
+    },
+    {
+      "id": "healing_potion",
+      "material": "minecraft:potion",
+      "nombre": { "en_us": "Healing Potion", "es_es": "Poción de curación" },
+      "lore": { "en_us": ["Restores the fallen adventurer."], "es_es": ["Restaura al aventurero caído."] },
+      "cantidad": 1,
+      "rareza": "rare",
+      "habilidades": {
+        "right_click": {
+          "cooldown": 30,
+          "consumir": true,
+          "acciones": [
+            { "tipo": "curar", "cantidad": 7 },
+            { "tipo": "efecto", "efecto": "regeneration", "segundos": 4 },
+            { "tipo": "sonido", "sonido": "entity.player.levelup", "volumen": 1.0, "tono": 1.0 }
+          ]
+        }
+      },
+      "recetas": [
+        {
+          "tipo": "shapeless",
+          "id": "healing_potion",
+          "ingredientes": ["minecraft:glass_bottle", "minecraft:glow_berries", "minecraft:golden_carrot"],
+          "categoria": "CONSUMABLES"
+        }
+      ]
+    },
+    {
+      "id": "arcane_staff",
+      "material": "minecraft:blaze_rod",
+      "modelo": "minecraft:stick",
+      "nombre": { "en_us": "Arcane Staff", "es_es": "Bastón arcano" },
+      "lore": { "en_us": ["A staff that channels raw magic."], "es_es": ["Un bastón que canaliza magia bruta."] },
+      "cantidad": 1,
+      "rareza": "epic",
+      "atributos": [{ "atributo": "attack_damage", "cantidad": 6 }],
+      "habilidades": {
+        "right_click": {
+          "cooldown": 60,
+          "acciones": [
+            { "tipo": "particula", "particula": "enchant", "cantidad": 20 },
+            { "tipo": "efecto", "efecto": "speed", "segundos": 5 },
+            { "tipo": "impulso", "fuerza": 1.5 },
+            { "tipo": "sonido", "sonido": "entity.illusioner.prepare_mirror" }
+          ]
+        },
+        "hit": {
+          "cooldown": 45,
+          "acciones": [
+            { "tipo": "danio", "cantidad": 4 },
+            { "tipo": "efecto", "efecto": "glowing", "segundos": 3, "objetivo": "target" },
+            { "tipo": "mensaje", "texto": "§dArcane pulse!" }
+          ]
+        }
+      },
+      "recetas": [
+        {
+          "tipo": "shaped",
+          "id": "arcane_staff",
+          "patron": [" S ", " B ", " S "],
+          "claves": { "S": "minecraft:stick", "B": "minecraft:amethyst_shard" },
+          "categoria": "EQUIPMENT"
+        }
+      ]
+    }
+  ]
+}

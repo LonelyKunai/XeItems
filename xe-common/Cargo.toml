@@ -1,0 +1,10 @@
+[package]
+name = "xe-common"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+
+[dependencies]
+pumpkin-plugin-api.workspace = true
+serde.workspace = true
+toml.workspace = true

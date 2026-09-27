@@ -1,0 +1,16 @@
+[package]
+name = "xe-items"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+pumpkin-plugin-api.workspace = true
+xe-common.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+# display: items in .toml files are written back after changes made in game.
+toml = { workspace = true, features = ["display"] }
